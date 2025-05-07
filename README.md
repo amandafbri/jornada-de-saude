@@ -22,7 +22,7 @@ Quer entender melhor como utilizar IA generativa na área de saúde? Confira ess
 1. Clone o repositório:
 ```bash
 git clone [repository-url]
-cd hcls-demo
+cd jornada-de-saude
 ```
 
 2. Crie um ambiente virtual:
@@ -38,6 +38,12 @@ pip install -r requirements.txt
 
 ## Uso
 
+## Autenticação:
+
+```bash
+gcloud auth application-default login
+```
+
 ### Para uso local do app Streamlit:
 
 1. Rode no terminal:
@@ -48,11 +54,11 @@ pip install -r requirements.txt
 ### Usando o app Streamlit no Cloud Run:
 
 ```bash
-gcloud builds submit --tag gcr.io/[PROJECT_ID]/hcls-demo
+gcloud builds submit --tag gcr.io/[PROJECT_ID]/jornada-de-saude
 ```
 
 ```bash
-gcloud run deploy --image gcr.io/[PROJECT_ID]/hcls-demo --platform managed --region us-central1 --allow-unauthenticated
+gcloud run deploy --image gcr.io/[PROJECT_ID]/jornada-de-saude --platform managed --region us-central1 --allow-unauthenticated
 ```
 
 ## Contribuindo
